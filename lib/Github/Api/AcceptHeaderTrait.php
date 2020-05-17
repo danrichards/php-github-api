@@ -11,37 +11,37 @@ trait AcceptHeaderTrait
 {
     protected $acceptHeaderValue;
 
-    protected function get($path, array $parameters = [], array $requestHeaders = [])
+    public function get($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::get($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function head($path, array $parameters = [], array $requestHeaders = [])
+    public function head($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::head($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function post($path, array $parameters = [], array $requestHeaders = [])
+    public function post($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::post($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function postRaw($path, $body, array $requestHeaders = [])
+    public function postRaw($path, $body, array $requestHeaders = [])
     {
         return parent::postRaw($path, $body, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function patch($path, array $parameters = [], array $requestHeaders = [])
+    public function patch($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::patch($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function put($path, array $parameters = [], array $requestHeaders = [])
+    public function put($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::put($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
 
-    protected function delete($path, array $parameters = [], array $requestHeaders = [])
+    public function delete($path, array $parameters = [], array $requestHeaders = [])
     {
         return parent::delete($path, $parameters, $this->mergeHeaders($requestHeaders));
     }
